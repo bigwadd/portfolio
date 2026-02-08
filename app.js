@@ -1,75 +1,33 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const nav = document.querySelector('nav');
-    const typewriter = document.querySelector('.typewriter');
-    const texts = JSON.parse(typewriter.getAttribute('data-texts'));
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 150;
-    let deletingSpeed = 140;
-    let pauseBetween = 2000;
+const texts = ["notrace.email", "full-stack dev", "ux/ui designer", "sysadmin", "problem solver"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+let isDeleting = false;
+let typeSpeed = 100;
 
-    function typeWriter() {
-        const currentText = texts[textIndex];
-        
-        if (isDeleting) {
-            typewriter.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
-            typingSpeed = deletingSpeed;
-        } else {
-            typewriter.textContent = currentText.substring(0, charIndex + 1);
-            charIndex++;
-            typingSpeed = 150;
-        }
-
-        if (!isDeleting && charIndex === currentText.length) {
-            typingSpeed = pauseBetween;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            textIndex = (textIndex + 1) % texts.length;
-            typingSpeed = 500;
-        }
-
-        setTimeout(typeWriter, typingSpeed);
+(function type() {
+    if (count === texts.length) count = 0;
+    currentText = texts[count];
+    
+    if (isDeleting) {
+        letter = currentText.slice(0, --index);
+        typeSpeed = 50;
+    } else {
+        letter = currentText.slice(0, ++index);
+        typeSpeed = 100;
     }
 
-    typeWriter();
+    document.getElementById("typewriter").textContent = letter;
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.style.background = 'rgba(10, 10, 10, 0.95)';
-        } else {
-            nav.style.background = 'rgba(10, 10, 10, 0.9)';
-        }
-    });
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
-    
-    document.querySelectorAll('section').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
-    });
-    
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-});
+    if (!isDeleting && letter.length === currentText.length) {
+        isDeleting = true;
+        typeSpeed = 2000;
+    } else if (isDeleting && letter.length === 0) {
+        isDeleting = false;
+        count++;
+        typeSpeed = 500;
+    }
+
+    setTimeout(type, typeSpeed);
+})();
