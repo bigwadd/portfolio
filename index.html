@@ -9,7 +9,11 @@
 </head>
 <body>
 
-  <main class="wrap">
+  <div id="loader">
+    <img src="PILOT-2.gif">
+  </div>
+
+  <main class="wrap hidden">
 
     <header>
       <h1>Waddle</h1>
@@ -46,22 +50,18 @@
     <section>
       <h2>Projects</h2>
       <div class="projects">
-
         <div class="project">
           <h3>notrace.email</h3>
           <p>Anonymous secure email platform focused on privacy and zero-log infrastructure.</p>
         </div>
-
         <div class="project">
           <h3>sourcecodes.forum</h3>
           <p>Developer forum and source-sharing community platform.</p>
         </div>
-
         <div class="project">
           <h3>atlasnodes.net</h3>
           <p>Game server hosting and Discord bot hosting platform.</p>
         </div>
-
       </div>
     </section>
 
@@ -79,6 +79,22 @@
     </footer>
 
   </main>
+
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader")
+      const main = document.querySelector(".wrap")
+
+      setTimeout(() => {
+        loader.classList.add("fade")
+        main.classList.remove("hidden")
+      }, 900)
+
+      setTimeout(() => {
+        loader.style.display = "none"
+      }, 1400)
+    })
+  </script>
 
 </body>
 </html>
