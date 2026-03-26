@@ -10,90 +10,417 @@
 <body>
 
   <div id="loader">
-    <img src="PILOT-2.gif">
+    <div class="loader-content">
+      <div class="loader-text">waddle waddle</div>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
   </div>
+
+  <div class="noise"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
 
   <main class="wrap hidden">
 
-    <header>
-      <h1>waddle</h1>
-      <p>Developer / Infrastructure / Security</p>
+    <nav class="nav">
+      <div class="nav-brand">waddle</div>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">about</a>
+        <a href="#stack" class="nav-link">stack</a>
+        <a href="#projects" class="nav-link">projects</a>
+        <a href="#contact" class="nav-link">contact</a>
+      </div>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <p class="status">ready for work</p>
+        <h1 class="hero-title">waddle</h1>
+        <p class="hero-subtitle">Developer / Infrastructure / Security</p>
+        <p class="hero-desc">Building secure, scalable infrastructure and modern web applications. Focused on automation, backend systems, and performance-driven design.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">view projects</a>
+          <a href="#contact" class="btn btn-secondary">get in touch</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="code-window">
+          <div class="code-header">
+            <div class="code-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <span class="code-filename">waddle@dev:~</span>
+          </div>
+          <div class="code-body">
+            <div class="code-line"><span class="code-prompt">$</span> <span class="code-cmd">whoami</span></div>
+            <div class="code-line"><span class="code-output">full-stack developer & security engineer</span></div>
+            <div class="code-line"><span class="code-prompt">$</span> <span class="code-cmd">cat stack.txt</span></div>
+            <div class="code-line"><span class="code-output">web3 • blockchain • infrastructure</span></div>
+            <div class="code-line"><span class="code-prompt">$</span> <span class="code-cmd">status</span></div>
+            <div class="code-line"><span class="code-output success">● building</span></div>
+            <div class="code-line cursor-line"><span class="code-prompt">$</span> <span class="cursor">_</span></div>
+          </div>
+        </div>
+      </div>
     </header>
 
-    <section>
-      <h2>About</h2>
-      <p>Full-stack developer building secure, scalable infrastructure and modern web applications. Focused on automation, backend systems, and performance-driven design.</p>
-    </section>
-
-    <section>
-      <h2>Stack</h2>
-      <div class="icons">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg">
+    <section id="about" class="about">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2>About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Full-stack developer building secure, scalable infrastructure and modern web applications. Specialized in blockchain technology, smart contract development, and decentralized systems.</p>
+          <p>Focused on automation, backend systems, and performance-driven design. Creating robust solutions that bridge traditional web infrastructure with web3 technologies.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-number" data-target="5">6+</span>
+            <span class="stat-label">years exp</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="50">11+</span>
+            <span class="stat-label">projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-target="99">99.9</span>
+            <span class="stat-label">uptime %</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="project">
+    <section id="stack" class="stack">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2>Stack</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-category">
+          <h3>Frontend</h3>
+          <div class="stack-items">
+            <div class="stack-item" data-tooltip="HTML5">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+            </div>
+            <div class="stack-item" data-tooltip="CSS3">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+            </div>
+            <div class="stack-item" data-tooltip="JavaScript">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+            </div>
+            <div class="stack-item" data-tooltip="React">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+            </div>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3>Backend</h3>
+          <div class="stack-items">
+            <div class="stack-item" data-tooltip="Node.js">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+            </div>
+            <div class="stack-item" data-tooltip="Python">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+            </div>
+            <div class="stack-item" data-tooltip="PHP">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+            </div>
+            <div class="stack-item" data-tooltip="C">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+            </div>
+            <div class="stack-item" data-tooltip="C#">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">
+            </div>
+            <div class="stack-item" data-tooltip="Lua">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/lua/lua-original.svg" alt="Lua">
+            </div>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3>Infrastructure</h3>
+          <div class="stack-items">
+            <div class="stack-item" data-tooltip="Docker">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+            </div>
+            <div class="stack-item" data-tooltip="Nginx">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx">
+            </div>
+            <div class="stack-item" data-tooltip="MongoDB">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+            </div>
+            <div class="stack-item" data-tooltip="MySQL">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+            </div>
+            <div class="stack-item" data-tooltip="Bash">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash">
+            </div>
+            <div class="stack-item" data-tooltip="Arduino">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">></div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
           <h3>notrace.email</h3>
-          <p>Anonymous secure email platform focused on privacy and zero-log mailing</p>
-        </div>
-        <div class="project">
+          <p>Anonymous secure email platform focused on privacy and zero-log mailing. End-to-end encryption with no metadata retention.</p>
+          <div class="project-tags">
+            <span class="tag">privacy</span>
+            <span class="tag">security</span>
+            <span class="tag">infrastructure</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">></div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
           <h3>sourcecodes.forum</h3>
-          <p>Developer forum and source-sharing community platform.</p>
-        </div>
-        <div class="project">
+          <p>Developer forum and source-sharing community platform. Built for developers to share, discuss, and collaborate on code.</p>
+          <div class="project-tags">
+            <span class="tag">community</span>
+            <span class="tag">full-stack</span>
+            <span class="tag">forum</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">></div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3>reject.wtf</h3>
+          <p>Reject.wtf was an roblox external cheat that had clean visuals non shaky bad aimbot and many other rich features to be in there.</p>
+          <div class="project-tags">
+            <span class="tag">community</span>
+            <span class="tag">cheat</span>
+            <span class="tag">etc</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon">></div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
           <h3>orlazens.com</h3>
-          <p>Orlazens.com is a unique zen script vault for many games and scripts and so far the best.</p>
-        </div>
+          <p>Unique zen script vault for many games. The ultimate place for gaming scripts and automation tools.</p>
+          <div class="project-tags">
+            <span class="tag">gaming</span>
+            <span class="tag">automation</span>
+            <span class="tag">scripts</span>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p><a href="mailto:iam@waddleops.dev">iam@waddleops.dev</a></p>
-      <p class="links">
-        <a href="https://github.com/waddlledev" target="_blank">GitHub</a>
-        <a href="https://discord.gg/WWm3N2Q3dp" target="_blank">Discord</a>
-      </p>
+    <section id="contact" class="contact">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-content">
+        <p class="contact-text">Have a project in mind or want to collaborate?</p>
+        <a href="mailto:iam@waddleops.dev" class="contact-email">iam@waddleops.dev</a>
+        <div class="social-links">
+          <a href="https://github.com/waddlledev" target="_blank" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://discord.gg" target="_blank" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+            <span>Discord</span>
+          </a>
+        </div>
+      </div>
     </section>
 
     <footer>
-      <p>© 2026 waddle</p>
+      <div class="footer-content">
+        <p class="footer-text">© 2026 waddle</p>
+      </div>
     </footer>
 
   </main>
 
   <script>
     window.addEventListener("load", () => {
-      const loader = document.getElementById("loader")
-      const main = document.querySelector(".wrap")
+      const loader = document.getElementById("loader");
+      const main = document.querySelector(".wrap");
+      const progress = document.querySelector(".loader-progress");
 
       setTimeout(() => {
-        loader.classList.add("fade")
-        main.classList.remove("hidden")
-      }, 900)
+        progress.style.width = "100%";
+      }, 100);
 
       setTimeout(() => {
-        loader.style.display = "none"
-      }, 1400)
-    })
+        loader.classList.add("fade");
+        main.classList.remove("hidden");
+        document.body.style.overflow = "auto";
+      }, 1200);
+
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 1700);
+    });
+
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    navToggle.addEventListener("click", () => {
+      navToggle.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          navLinks.classList.remove("active");
+          navToggle.classList.remove("active");
+        }
+      });
+    });
+
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-in");
+          if (entry.target.classList.contains("about-stats")) {
+            animateStats();
+          }
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll("section, .project-card, .stack-category").forEach(el => {
+      el.classList.add("animate-on-scroll");
+      observer.observe(el);
+    });
+
+    function animateStats() {
+      const stats = document.querySelectorAll(".stat-number");
+      stats.forEach(stat => {
+        const target = parseInt(stat.getAttribute("data-target"));
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+
+        const updateStat = () => {
+          current += increment;
+          if (current < target) {
+            stat.textContent = Math.floor(current);
+            requestAnimationFrame(updateStat);
+          } else {
+            stat.textContent = target + (stat.parentElement.querySelector(".stat-label").textContent.includes("%") ? "" : "+");
+          }
+        };
+
+        updateStat();
+      });
+    }
+
+    const cursor = document.querySelector(".cursor");
+    if (cursor) {
+      setInterval(() => {
+        cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
+      }, 530);
+    }
+
+    document.addEventListener("mousemove", (e) => {
+      const orbs = document.querySelectorAll(".glow-orb");
+      orbs.forEach((orb, index) => {
+        const speed = (index + 1) * 20;
+        const xOffset = (window.innerWidth / 2 - e.clientX) / speed;
+        const yOffset = (window.innerHeight / 2 - e.clientY) / speed;
+        orb.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+      });
+    });
+
+    const sections = document.querySelectorAll("section[id]");
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= sectionTop - 200) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      document.querySelectorAll(".nav-link").forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
   </script>
 
 </body>
